@@ -1,5 +1,5 @@
 const mongoose=require("mongoose")
-mongoose.connect("mongodb://0.0.0.0:27017/react-login-tut")
+mongoose.connect("mongodb://127.0.0.1:27017/ReactLogin")
 .then(()=>{
     console.log("mongodb connected");
 })
@@ -11,7 +11,8 @@ mongoose.connect("mongodb://0.0.0.0:27017/react-login-tut")
 const newSchema=new mongoose.Schema({
     email:{
         type:String,
-        required:true
+        required:true,
+       
     },
     password:{
         type:String,

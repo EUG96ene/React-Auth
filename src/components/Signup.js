@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
 import { useNavigate, Link } from "react-router-dom"
-
+import "./login.css";
 
 function Login() {
     const history=useNavigate();
@@ -40,9 +40,9 @@ function Login() {
 
 
     return (
-        <div className="login">
-
-            <h1>Signup</h1>
+        <div className="container">
+    <div className="form-box">
+        <h1 id="title">Sign Up</h1>
 
             <form action="POST">
                 <input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email"  />
@@ -51,12 +51,11 @@ function Login() {
 
             </form>
 
-            <br />
-            <p>OR</p>
-            <br />
+            
 
-            <Link to="/">Login Page</Link>
+            <Link to="/">Sign In</Link>
 
+        </div>
         </div>
     )
 }
